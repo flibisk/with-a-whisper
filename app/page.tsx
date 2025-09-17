@@ -93,7 +93,7 @@ export default function HomePage() {
         </h2>
         <div className="prose prose-invert max-w-none">
           <p className="text-white/90 leading-relaxed mb-4">
-            With a Whisper is a creative luxury-branding studio. We take brands that are stuck in the middle and lift them into the realm of the aspirational and the timeless. Using cinematic storytelling, high-end design, immersive technology, and a whole-of-brand approach, we don't just market products - we build desire, prestige, and legacy.
+            With a Whisper is a creative luxury-branding studio. We take brands that are stuck in the middle and lift them into the realm of the aspirational and the timeless. Using cinematic storytelling, high-end design, immersive technology, and a whole-of-brand approach, we don&apos;t just market products - we build desire, prestige, and legacy.
           </p>
           <p className="text-white/90 leading-relaxed">
             Our name reflects the truth that real luxury never shouts - it whispers, and people lean in.
