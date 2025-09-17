@@ -49,6 +49,14 @@ User Agent: ${userAgent || 'Unknown'}
       return { success: true, id: 'dev-mode' }
     }
 
+    console.log('Attempting to send email with Resend API...', {
+      from,
+      to,
+      subject: `New Contact Form Submission from ${data.name}`,
+      hasApiKey: !!process.env.RESEND_API_KEY,
+      apiKeyPrefix: process.env.RESEND_API_KEY?.substring(0, 10) + '...'
+    })
+
     const result = await resend.emails.send({
       from,
       to,
@@ -57,9 +65,21 @@ User Agent: ${userAgent || 'Unknown'}
       html: htmlText,
     })
 
+    console.log('Email sent successfully:', {
+      success: true,
+      id: result.data?.id,
+      result: result
+    })
+
     return { success: true, id: result.data?.id }
   } catch (error) {
     console.error('Failed to send email:', error)
+    console.error('Error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined,
+      hasApiKey: !!process.env.RESEND_API_KEY,
+      apiKeyPrefix: process.env.RESEND_API_KEY?.substring(0, 10) + '...'
+    })
     return { success: false, error: 'Failed to send email' }
   }
 }
