@@ -176,16 +176,20 @@ export default function Form({ onSuccess }: FormProps) {
             value={formData.budget}
             onChange={(e) => handleInputChange('budget', e.target.value)}
             className={cn(
-              'w-full px-4 py-3 bg-black border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
+              'w-full px-4 py-3 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
               errors.budget && 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
             )}
-            style={{ backgroundColor: '#000000' }}
+            style={{ 
+              backgroundColor: '#000000',
+              background: '#000000',
+              backgroundImage: 'none'
+            }}
             disabled={isSubmitting}
           >
-            <option value="15k" style={{ backgroundColor: '#000000', color: '#ffffff' }}>$15k</option>
-            <option value="50k" style={{ backgroundColor: '#000000', color: '#ffffff' }}>$50k</option>
-            <option value="100k" style={{ backgroundColor: '#000000', color: '#ffffff' }}>$100k</option>
-            <option value="500k" style={{ backgroundColor: '#000000', color: '#ffffff' }}>$500k</option>
+            <option value="15k" style={{ backgroundColor: '#000000', color: '#ffffff', background: '#000000', backgroundImage: 'none' }}>$15k</option>
+            <option value="50k" style={{ backgroundColor: '#000000', color: '#ffffff', background: '#000000', backgroundImage: 'none' }}>$50k</option>
+            <option value="100k" style={{ backgroundColor: '#000000', color: '#ffffff', background: '#000000', backgroundImage: 'none' }}>$100k</option>
+            <option value="500k" style={{ backgroundColor: '#000000', color: '#ffffff', background: '#000000', backgroundImage: 'none' }}>$500k</option>
           </select>
           {errors.budget && (
             <p className="mt-1 text-sm text-red-400">{errors.budget}</p>
