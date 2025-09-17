@@ -62,8 +62,8 @@ export default function HomePage() {
             <Image
               src="/logo.svg"
               alt="With a Whisper"
-              width={200}
-              height={80}
+              width={240}
+              height={96}
               className="mx-auto"
               priority
             />

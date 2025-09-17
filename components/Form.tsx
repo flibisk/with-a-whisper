@@ -93,7 +93,7 @@ export default function Form({ onSuccess }: FormProps) {
             value={formData.name}
             onChange={(e) => handleInputChange('name', e.target.value)}
             className={cn(
-              'w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
+              'w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
               errors.name && 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
             )}
             placeholder="Your full name"
@@ -114,7 +114,7 @@ export default function Form({ onSuccess }: FormProps) {
             value={formData.email}
             onChange={(e) => handleInputChange('email', e.target.value)}
             className={cn(
-              'w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
+              'w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
               errors.email && 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
             )}
             placeholder="your@email.com"
@@ -135,7 +135,7 @@ export default function Form({ onSuccess }: FormProps) {
             value={formData.company}
             onChange={(e) => handleInputChange('company', e.target.value)}
             className={cn(
-              'w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
+              'w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
               errors.company && 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
             )}
             placeholder="Your company name"
@@ -156,7 +156,7 @@ export default function Form({ onSuccess }: FormProps) {
             value={formData.phone}
             onChange={(e) => handleInputChange('phone', e.target.value)}
             className={cn(
-              'w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
+              'w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
               errors.phone && 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
             )}
             placeholder="+1 (555) 123-4567"
@@ -176,15 +176,16 @@ export default function Form({ onSuccess }: FormProps) {
             value={formData.budget}
             onChange={(e) => handleInputChange('budget', e.target.value)}
             className={cn(
-              'w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
+              'w-full px-4 py-3 bg-black border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all',
               errors.budget && 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
             )}
+            style={{ backgroundColor: '#000000' }}
             disabled={isSubmitting}
           >
-            <option value="15k">$15k</option>
-            <option value="50k">$50k</option>
-            <option value="100k">$100k</option>
-            <option value="500k">$500k</option>
+            <option value="15k" style={{ backgroundColor: '#000000', color: '#ffffff' }}>$15k</option>
+            <option value="50k" style={{ backgroundColor: '#000000', color: '#ffffff' }}>$50k</option>
+            <option value="100k" style={{ backgroundColor: '#000000', color: '#ffffff' }}>$100k</option>
+            <option value="500k" style={{ backgroundColor: '#000000', color: '#ffffff' }}>$500k</option>
           </select>
           {errors.budget && (
             <p className="mt-1 text-sm text-red-400">{errors.budget}</p>

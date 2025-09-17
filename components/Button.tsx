@@ -20,7 +20,7 @@ export default function Button({
   disabled = false,
   type = 'button',
 }: ButtonProps) {
-  const baseClasses = 'relative px-8 py-4 rounded-2xl font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/20 disabled:opacity-50 disabled:cursor-not-allowed'
+  const baseClasses = 'relative px-8 py-4 rounded-2xl font-normal text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/20 disabled:opacity-50 disabled:cursor-not-allowed'
   
   const variantClasses = {
     primary: 'bg-white/10 text-white border border-white/10 hover:bg-white/20 hover:border-white/20 hover:shadow-lg hover:shadow-white/5',

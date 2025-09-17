@@ -1,7 +1,7 @@
 import { Resend } from 'resend'
 import { ContactFormData } from './validation'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY || 'dev-key')
 
 export async function sendContactEmail(data: ContactFormData, userAgent?: string) {
   const to = process.env.CONTACT_TO || 'peter@shinystudio.co.uk'
@@ -34,6 +34,19 @@ User Agent: ${userAgent || 'Unknown'}
   `
 
   try {
+    // In development mode without a real API key, just log and return success
+    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'dev-key') {
+      console.log('Development mode - Contact form submission:', {
+        name: data.name,
+        email: data.email,
+        company: data.company,
+        phone: data.phone,
+        budget: data.budget,
+        timestamp: new Date().toISOString()
+      })
+      return { success: true, id: 'dev-mode' }
+    }
+
     const result = await resend.emails.send({
       from,
       to,
