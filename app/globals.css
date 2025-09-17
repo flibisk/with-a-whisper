@@ -27,6 +27,24 @@
     @apply animate-shimmer;
   }
   
+  /* Safari-specific select styling to remove gradients */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #000000 !important;
+    background-image: none !important;
+    background-color: #000000 !important;
+  }
+  
+  /* Safari-specific option styling */
+  select option {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+  }
+  
   /* Reduced motion support */
   @media (prefers-reduced-motion: reduce) {
     *,
