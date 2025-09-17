@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-black text-white antialiased;
+  }
+  
+  /* Custom focus styles for better accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-white/20 ring-offset-2 ring-offset-black;
+  }
+}
+
+@layer components {
+  /* Luxury shimmer effect for logo */
+  .shimmer {
+    @apply transition-all duration-300;
+  }
+  
+  .shimmer:hover {
+    @apply animate-shimmer;
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Custom gradient for video overlay */
+  .video-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+  
+  /* Subtle radial vignette */
+  .radial-vignette {
+    background: radial-gradient(
+      ellipse at center,
+      transparent 0%,
+      rgba(0, 0, 0, 0.1) 70%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  }
+}
