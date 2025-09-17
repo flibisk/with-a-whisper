@@ -35,14 +35,16 @@ User Agent: ${userAgent || 'Unknown'}
 
   try {
     // In development mode without a real API key, just log and return success
-    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'dev-key') {
+    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'dev-key' || !process.env.RESEND_API_KEY.startsWith('re_')) {
       console.log('Development mode - Contact form submission:', {
         name: data.name,
         email: data.email,
         company: data.company,
         phone: data.phone,
         budget: data.budget,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        hasApiKey: !!process.env.RESEND_API_KEY,
+        apiKeyPrefix: process.env.RESEND_API_KEY?.substring(0, 10) + '...'
       })
       return { success: true, id: 'dev-mode' }
     }
