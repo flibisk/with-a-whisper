@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://with-a-whisper.vercel.app'),
+  metadataBase: new URL('https://withawhisper.co'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'With a Whisper - Creative Luxury Branding Studio',
     description: 'We take brands that are stuck in the middle and lift them into the realm of the aspirational and the timeless.',
-    url: 'https://with-a-whisper.vercel.app',
+    url: 'https://withawhisper.co',
     siteName: 'With a Whisper',
     locale: 'en_US',
     type: 'website',
