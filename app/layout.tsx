@@ -15,9 +15,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'With a Whisper - Creative Luxury Branding Studio',
-  description: 'We take brands that are stuck in the middle and lift them into the realm of the aspirational and the timeless. Using cinematic storytelling, high-end design, immersive technology, and a whole-of-brand approach.',
-  keywords: ['luxury branding', 'creative studio', 'brand strategy', 'cinematic storytelling', 'high-end design'],
+  title: 'With a Whisper - Creative Luxury Studio',
+  description: 'With a Whisper elevates ambitious brands into the aspirational and timeless through cinematic storytelling, refined design, and immersive technology.',
+  keywords: ['luxury studio', 'creative agency', 'brand strategy', 'cinematic storytelling', 'refined design', 'immersive technology'],
   authors: [{ name: 'With a Whisper' }],
   creator: 'With a Whisper',
   publisher: 'With a Whisper',
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'With a Whisper - Creative Luxury Branding Studio',
-    description: 'We take brands that are stuck in the middle and lift them into the realm of the aspirational and the timeless.',
+    title: 'With a Whisper - Creative Luxury Studio',
+    description: 'With a Whisper elevates ambitious brands into the aspirational and timeless through cinematic storytelling, refined design, and immersive technology.',
     url: 'https://withawhisper.co',
     siteName: 'With a Whisper',
     locale: 'en_US',
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
         url: '/og-image.svg',
         width: 1200,
         height: 630,
-        alt: 'With a Whisper - Creative Luxury Branding Studio',
+        alt: 'With a Whisper - Creative Luxury Studio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'With a Whisper - Creative Luxury Branding Studio',
-    description: 'We take brands that are stuck in the middle and lift them into the realm of the aspirational and the timeless.',
+    title: 'With a Whisper - Creative Luxury Studio',
+    description: 'With a Whisper elevates ambitious brands into the aspirational and timeless through cinematic storytelling, refined design, and immersive technology.',
     images: ['/og-image.svg'],
   },
   robots: {
