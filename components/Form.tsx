@@ -189,7 +189,7 @@ export default function Form({ onSuccess }: FormProps) {
             <option value="15k" style={{ backgroundColor: '#000000', color: '#ffffff', background: '#000000', backgroundImage: 'none' }}>$15k</option>
             <option value="50k" style={{ backgroundColor: '#000000', color: '#ffffff', background: '#000000', backgroundImage: 'none' }}>$50k</option>
             <option value="100k" style={{ backgroundColor: '#000000', color: '#ffffff', background: '#000000', backgroundImage: 'none' }}>$100k</option>
-            <option value="500k" style={{ backgroundColor: '#000000', color: '#ffffff', background: '#000000', backgroundImage: 'none' }}>$500k</option>
+            <option value="500k+" style={{ backgroundColor: '#000000', color: '#ffffff', background: '#000000', backgroundImage: 'none' }}>$500k+</option>
           </select>
           {errors.budget && (
             <p className="mt-1 text-sm text-red-400">{errors.budget}</p>

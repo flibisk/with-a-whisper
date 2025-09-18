@@ -26,20 +26,20 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://withawhisper.com'),
+  metadataBase: new URL('https://with-a-whisper.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'With a Whisper - Creative Luxury Branding Studio',
     description: 'We take brands that are stuck in the middle and lift them into the realm of the aspirational and the timeless.',
-    url: 'https://withawhisper.com',
+    url: 'https://with-a-whisper.vercel.app',
     siteName: 'With a Whisper',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'With a Whisper - Creative Luxury Branding Studio',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'With a Whisper - Creative Luxury Branding Studio',
     description: 'We take brands that are stuck in the middle and lift them into the realm of the aspirational and the timeless.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.svg'],
   },
   robots: {
     index: true,
