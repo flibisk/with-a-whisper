@@ -164,6 +164,30 @@ export default function HomePage() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Footer */}
+      <footer className="relative z-10 w-full py-6 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-white/60 text-sm">
+            © 2024 With a Whisper. All rights reserved.
+          </p>
+          <div className="mt-2 space-x-4">
+            <a 
+              href="/privacy-policy" 
+              className="text-white/60 hover:text-white/80 text-sm transition-colors duration-200"
+            >
+              Privacy Policy
+            </a>
+            <span className="text-white/40">•</span>
+            <a 
+              href="/terms-of-service" 
+              className="text-white/60 hover:text-white/80 text-sm transition-colors duration-200"
+            >
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
